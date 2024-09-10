@@ -24,8 +24,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{secret.S3ACCESSKEY}}
-          aws-secret-key-id: ${{secret.S3SECRETKEY}}
+          aws-access-key-id: ${{secrets.S3ACCESSKEY}}
+          aws-secret-key-id: ${{secrets.S3SECRETKEY}}
           aws-region: $ ap-south-1
       - name: Deploy To S3-Bucket
         run: aws s3 sync . s3://raghav-singh
