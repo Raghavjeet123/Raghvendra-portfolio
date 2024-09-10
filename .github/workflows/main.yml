@@ -16,10 +16,10 @@ jobs:
         with:
            node-version: 16
 
-      - name: Install Dependencies 
-        run: npm ci
-      - name: Run-Build 
-        run: npm run build
+  #    - name: Install Dependencies 
+ #       run: npm ci
+ #     - name: Run-Build 
+  #      run: npm run build
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -28,5 +28,5 @@ jobs:
           aws-secret-key-id: ${{secret.S3SECRETKEY}}
           aws-region: $ ap-south-1
       - name: Deploy To S3-Bucket
-        run: aws s3 sync .s3/
+        run: aws s3 sync .s3//raghav-singh
      
