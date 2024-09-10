@@ -22,7 +22,7 @@ jobs:
   #      run: npm run build
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{secret.S3ACCESSKEY}}
           aws-secret-key-id: ${{secret.S3SECRETKEY}}
