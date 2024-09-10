@@ -26,8 +26,8 @@ jobs:
         with:
           aws-access-key-id: ${{secrets.S3ACCESSKEY}}
           aws-secret-key-id: ${{secrets.S3SECRETKEY}}
-          aws-region: $ ap-south-1
+          aws-region: $ us-east-1
           
       - name: Deploy To S3-Bucket
-        run: aws s3 sync . s3://raghav-singh --delete
+        run: aws s3 sync . s3://raghav-dav 
      
